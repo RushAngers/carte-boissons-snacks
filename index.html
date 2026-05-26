@@ -8,21 +8,73 @@
 </head>
 <body>
     <div class="container">
-        <header>
+        <!-- En-tête -->
+        <header class="header">
             <div class="logo-container">
-                <img src="RUSH.png" alt="Rush Action Game Angers" class="main-logo">
+                <img src="RUSH.png" alt="Rush Action Game Angers" class="logo">
             </div>
-            <h1>Carte des Boissons et Snacks</h1>
+            <h1>Rush Action Game</h1>
+            <p class="subtitle">🌿 Boissons locales & produits de qualité</p>
         </header>
 
-        <main>
-            <section id="products">
-                <!-- Les produits seront chargés via JavaScript -->
+        <!-- Onglets principaux -->
+        <nav class="main-tabs">
+            <button class="tab-btn active" data-tab="boissons">
+                <span class="icon">🍹</span> Boissons
+            </button>
+            <button class="tab-btn" data-tab="snacks">
+                <span class="icon">🍿</span> Snacks
+            </button>
+        </nav>
+
+        <!-- Contenu principal -->
+        <main class="main-content">
+            <!-- Section Boissons -->
+            <section id="boissons" class="tab-content active">
+                <!-- Sous-onglets -->
+                <nav class="sub-tabs">
+                    <button class="sub-tab-btn active" data-category="softs">
+                        <span class="icon">🥤</span> Softs
+                    </button>
+                    <button class="sub-tab-btn" data-category="bieres">
+                        <span class="icon">🍺</span> Bières
+                    </button>
+                    <button class="sub-tab-btn" data-category="vins">
+                        <span class="icon">🍷</span> Vins
+                    </button>
+                </nav>
+
+                <!-- Contenu des sous-catégories -->
+                <div class="products-container">
+                    <div id="softs-content" class="category-content active"></div>
+                    <div id="bieres-content" class="category-content"></div>
+                    <div id="vins-content" class="category-content"></div>
+                </div>
+            </section>
+
+            <!-- Section Snacks -->
+            <section id="snacks" class="tab-content">
+                <!-- Sous-onglets Snacks -->
+                <nav class="sub-tabs">
+                    <button class="sub-tab-btn active" data-category="snacks-sucres">
+                        <span class="icon">🍪</span> Sucrés
+                    </button>
+                    <button class="sub-tab-btn" data-category="snacks-sales">
+                        <span class="icon">🍟</span> Salés
+                    </button>
+                </nav>
+
+                <!-- Contenu des snacks -->
+                <div class="products-container">
+                    <div id="snacks-sucres-content" class="category-content active"></div>
+                    <div id="snacks-sales-content" class="category-content"></div>
+                </div>
             </section>
         </main>
 
-        <footer>
-            <p>&copy; 2026 Rush Action Game Angers - Tous droits réservés</p>
+        <!-- Footer -->
+        <footer class="footer">
+            <p>🌿 Une sélection locale & responsable, avec amour</p>
         </footer>
     </div>
 
